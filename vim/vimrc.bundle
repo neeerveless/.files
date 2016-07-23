@@ -1,0 +1,58 @@
+"---------------------------
+" Neobundle Settings.
+"---------------------------
+" bundleで管理するディレクトリを指定
+set runtimepath+=~/.vim/bundle/neobundle.vim/
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" neobundle自体をneobundleで管理
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" 今後このあたりに追加のプラグインをどんどん書いて行きます！！"
+" lightline
+NeoBundle 'itchyny/lightline.vim'
+" 作業ディレクトリからファイル表示
+NeoBundle 'scrooloose/nerdtree'
+" コメントを挿入
+NeoBundle 'tomtom/tcomment_vim'
+" インデントに色を付けて見やすくする
+NeoBundle 'nathanaelkane/vim-indent-guides'
+" 補完するやつ
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+" 爆速カーソル移動
+NeoBundle 'Lokaltog/vim-easymotion'
+" Gitが使える
+NeoBundle 'tpope/vim-fugitive'
+" ファイルの履歴
+NeoBundle 'yegappan/mru'
+" ソースコード上のメソッド宣言、変数宣言の一覧を表示
+NeoBundle 'taglist.vim'
+" quickrun.vim : 編集中のファイルを簡単に実行できるプラグイン
+NeoBundle 'thinca/vim-quickrun'
+" indent guide | が入る
+NeoBundle 'Yggdroot/indentline'
+" Align : 高機能整形・桁揃えプラグイン
+NeoBundle 'Align'
+" 構文チェック
+NeoBundle 'scrooloose/syntastic.git'
+" 検索
+NeoBundle 't9md/vim-quickhl'
+" ファイル検索して開く
+NeoBundle "ctrlpvim/ctrlp.vim"
+" ファイルオープンを便利に
+NeoBundle 'Shougo/unite.vim'
+" Unite.vimで最近使ったファイルを表示できるようにする
+NeoBundle 'Shougo/neomru.vim'
+
+call neobundle#end()
+
+" Required:
+filetype plugin indent on
+
+" 未インストールのプラグインがある場合、インストールするかどうかを尋ねてくれるようにする設定
+" 毎回聞かれると邪魔な場合もあるので、この設定は任意です。
+NeoBundleCheck

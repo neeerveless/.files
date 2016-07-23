@@ -1,0 +1,16 @@
+[alias]
+  co = checkout
+  st = status
+  ci = commit -m
+  ca = commit --amend
+  di = diff
+  br = branch
+  graph = log --graph --date-order -C -M --pretty=format:\"<%n> %ad [%an] %Cgreen%d%Creset %s\" --all --date=short
+  gr = log --graph --date-order -C -M --pretty=format:\"<%h> %ad [%an] %Cgreen%d%creset %s\" --date=short
+[core]
+    editor = /usr/local/bin/vim
+[color]
+  ui = true
+[user]
+	name = homma-masahiro
+	email = homma.masahiro@adways.net
